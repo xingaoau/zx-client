@@ -44,7 +44,7 @@ class Question extends Component {
 
 		return (
 			<Fragment>
-        <h1>Magic 8 ball, What you have in the store?</h1>
+        <h1 style={{ textAlign: 'center', marginTop: 20 }}>Magic 8 ball, What you have in the store?</h1>
 				<Form {...formItemLayout} onSubmit={this.handleSubmit}>
 					<Form.Item label="Question">
 						{getFieldDecorator('question', {
