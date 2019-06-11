@@ -2,11 +2,13 @@ import React, { Component, Fragment } from 'react'
 import QuestionForm from './components/question'
 
 import { getAnswer } from './api'
+import './App.css'
 
 export default class App extends Component {
 
 	state = {
-		answer: ''
+		answer: '',
+		show: true
 	}
 
  	getRandomInt = (min, max) => {
@@ -20,7 +22,8 @@ export default class App extends Component {
     const response = await getAnswer(type)
 		const result = response.data
     this.setState({
-			answer: result.doc[0].answer
+			answer: result.doc[0].answer,
+			show: false
 		})
   }
 
@@ -30,8 +33,14 @@ export default class App extends Component {
 		return (
 			<Fragment>
 		    <QuestionForm handleSubmit={this.handleSubmit}/>
-				<p className="ant-col ant-col-xs-24 ant-col-sm-6" style={{ textAlign: 'right' }}>Answer is: </p>
-				<p className="ant-col ant-col-xs-24 ant-col-sm-12">{ answer }</p>
+				{/* <p className="ant-col ant-col-xs-24 ant-col-sm-6" style={{ textAlign: 'right' }}>Answer is: </p>
+				<p className="ant-col ant-col-xs-24 ant-col-sm-12">{ answer }</p> */}
+				<div className="eight-ball">
+					<div className="answer">
+						{ this.state.show ? <p id="eight">8</p> : null }
+						<p id="answer">{ answer }</p>
+					</div>
+				</div>
 			</Fragment>
 		)
   }

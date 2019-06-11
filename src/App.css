@@ -1,0 +1,29 @@
+div.eight-ball {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+div.answer {
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+}
+
+p#eight {
+  font-size: 5em;
+  margin: 10% auto;
+  color: white;
+  text-align: center;
+}
+
+p#answer {
+  padding: 40px;
+  color: lightblue;
+  letter-spacing: 2px;
+}

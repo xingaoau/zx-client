@@ -52,7 +52,7 @@ class Question extends Component {
 						})(<Input />)}
 					</Form.Item>
 					<Form.Item {...tailFormItemLayout}>
-						<Button type="primary" htmlType="submit">Ask</Button>
+						<Button type="primary" htmlType="submit">Shake</Button>
 					</Form.Item>
 				</Form>
 			</Fragment>
